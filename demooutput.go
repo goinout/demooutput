@@ -2,10 +2,17 @@ package main
 
 import (
 	"fmt"
+
+	"github.com/goinout/goinout"
 )
 
-// Handle the out plugin
-func Handle(params map[string]interface{}, data []byte) error {
+var Handle goinout.OutputFunc
+
+func init() {
+	Handle = output
+}
+
+func output(params map[string]interface{}, data []byte) error {
 	fmt.Println("params", params)
 	fmt.Println("data", data)
 	return nil
