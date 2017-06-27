@@ -4,7 +4,8 @@ import (
 	"fmt"
 )
 
-func output(params map[string]interface{}) error {
+// Handle the output
+func Handle(params map[string]interface{}) error {
 	fmt.Println("params", params)
 	return nil
 }
